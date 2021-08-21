@@ -1,0 +1,30 @@
+<header class="text-gray-600 body-font">
+  <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+    <a href='{% url "recipes:get_recipes_view"%}' class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
+      <svg height="35" viewBox="0 0 516 516" width="35" xmlns="http://www.w3.org/2000/svg"><g id="flat"><path d="m392 392h32a0 0 0 0 1 0 0v76a20 20 0 0 1 -20 20h-12a0 0 0 0 1 0 0v-96a0 0 0 0 1 0 0z" fill="#961b20"/><path d="m88 24h316a20 20 0 0 1 20 20v360a20 20 0 0 1 -20 20h-316a0 0 0 0 1 0 0v-400a0 0 0 0 1 0 0z" fill="#e82f3e"/><path d="m376 192a64 64 0 0 0 -60.635-63.911 64 64 0 0 0 -118.767.094c-1.52-.109-3.05-.183-4.6-.183a64.009 64.009 0 0 0 -16 125.984v58.016h160.002v-60.67a64.007 64.007 0 0 0 40-59.33z" fill="#eaeae8"/><path d="m88 424-48 32v-400a32 32 0 0 1 32-32h16z" fill="#961b20"/><g fill="#cbcbcb"><path d="m304.006 261.985a8.024 8.024 0 0 1 -2-.254 71.61 71.61 0 0 1 -33.491-19.4h-25.03a71.61 71.61 0 0 1 -33.491 19.4 8 8 0 1 1 -3.988-15.5 55.761 55.761 0 0 0 28-17.2 8 8 0 0 1 6-2.706h32a8 8 0 0 1 6 2.706 55.761 55.761 0 0 0 28 17.2 8 8 0 0 1 -1.988 15.75z"/><path d="m216 320a8 8 0 0 1 -8-8v-32a8 8 0 0 1 16 0v32a8 8 0 0 1 -8 8z"/><path d="m296 320a8 8 0 0 1 -8-8v-32a8 8 0 0 1 16 0v32a8 8 0 0 1 -8 8z"/><path d="m256 320a8 8 0 0 1 -8-8v-32a8 8 0 0 1 16 0v32a8 8 0 0 1 -8 8z"/><path d="m176 312h160v32h-160z"/></g><path d="m72 424h320a0 0 0 0 1 0 0v64a0 0 0 0 1 0 0h-320a32 32 0 0 1 -32-32 32 32 0 0 1 32-32z" fill="#eaeae8"/><path d="m424 88h48l-16 24 16 24h-48z" fill="#02a437"/><path d="m424 168h64l-16 24 16 24h-64z" fill="#009cf7"/><path d="m224 392h-24a8 8 0 0 1 0-16h24a8 8 0 0 1 0 16z" fill="#961b20"/><path d="m320 392h-64a8 8 0 0 1 0-16h64a8 8 0 0 1 0 16z" fill="#961b20"/><path d="m424 136-112-112h92a20 20 0 0 1 20 20z" fill="#fbb540"/><circle cx="368" cy="80" fill="#ea9d2d" r="24"/><path d="m120 464h-48a8 8 0 0 1 0-16h48a8 8 0 0 1 0 16z" fill="#cbcbcb"/><path d="m160 464h-8a8 8 0 0 1 0-16h8a8 8 0 0 1 0 16z" fill="#cbcbcb"/><path d="m392 464h-200a8 8 0 0 1 0-16h200z" fill="#cbcbcb"/></g></svg>
+        <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+      </svg>
+      <span class="ml-3 text-xl">Ramy's Tedbira</span>
+    </a>
+
+    <nav class="md:mr-auto md:ml-4 md:py-1 md:pl-4 md:border-l md:border-gray-400	flex flex-wrap items-center text-base justify-center">
+      <a href='{% url "recipes:search_by_ingredients"%}' class="mr-5 hover:text-gray-900">Search by Ingrediants</a>
+    </nav>
+<br>
+    <form action="" method="post" >
+      {% csrf_token %}
+      <div class="input-group">
+        <input type="text" class=" bg-white rounded border border-radius-100 border-gray-300 focus:border-red-500 focus:ring-2 focus:ring-red-200 text-base outline-none text-gray-700 py-1 px-3 leading-17 transition-colors duration-200" name="recipe" placeholder="{%if ingredient_search%}Type your ingredients{%else%}Search for recipes..{%endif%}">
+          <button class="btn btn-default" type="submit">
+
+      <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-1" viewBox="0 0 24 24">
+        <path d="M5 12h14M12 5l7 7-7 7"></path>
+      </svg>
+    </button>
+        </div>
+      </div>
+      </form>
+  </div>
+</header>
+
+     

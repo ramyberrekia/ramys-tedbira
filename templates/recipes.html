@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% block content %}
+  
+<section class="text-gray-600 body-font">
+    <div class="container px-5 py-24 mx-auto">
+      <div class="flex flex-wrap w-full mb-20">
+        <div class="lg:w-1/2 w-full mb-6 lg:mb-0">
+          <h1 class="sm:text-3xl text-2xl font-medium title-font mb-2 text-gray-900">
+          {% if not ingredient_search %}{{recipe}}'s recipes{%else%}{{ingredientss}}'s recipes{% endif %}
+            </h1>
+          <div class="h-1 w-20 bg-red-500 rounded"></div>
+        </div>
+        <p class="lg:w-1/2 w-full leading-relaxed text-gray-500">Ramy likes  {% if not ingredient_search %}{{recipe}}'s recipes{%else%}{{ingredientss}}'s recipes{% endif %}, so It'll be great if you cook it for him.</p>
+      </div>
+      <div class="flex flex-wrap -m-3">
+          {% for recipe in data.results %}
+        <div class="xl:w-1/3 md:w-1/2 p-3">
+          <div class="bg-gray-100 p-6 rounded-lg">
+            <img class="h-40 rounded w-full object-cover object-center mb-6"  src="https://spoonacular.com/recipeImages/{{recipe.image}}" alt="{{recipe.title}}'s Image">
+            <h3 class="tracking-widest text-red-500 text-xs font-medium title-font"><a href='{% url "recipes:get_recipes_list" recipe.id%}' target="_blank">More details &#10230;</a></h3>
+            <h2 class="text-lg text-gray-900 font-medium title-font mb-4">{{recipe.title}}</h2>
+          </div>
+        </div>
+        {% endfor %}
+        
+      </div>
+    </div>
+  </section>
+  
+{% endblock content %}
+
+
+

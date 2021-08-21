@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+{% block content %}
+  
+<section class="text-gray-600 body-font">
+    <div class="container mx-auto flex px-5 py-24 md:flex-row flex-col items-left">
+      <div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 mb-10 md:mb-0">
+        <h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900">{{data.title}}</h1><br><a href="{%url 'recipes:get_recipes_view'%}" class="mb-8 leading-relaxed text-red-400 hover:text-red-500">Go back to the main page. &#10230;</a> </p><br>
+        <img class="object-cover object-center rounded" alt="hero" src="{{data.image}}" />
+        <br>
+        <h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900">How do we prepare it?</h1><br><br>
+        <ul>{% for instruction in instructions %}
+            <li>• {{instruction.step}}</li><br>
+        {% endfor %}
+    </ul>
+    <p><b>{{message}}</b><br><a href="{{instructions_url}}">Here.</a></p>
+    
+      </div>
+
+       <div class="lg:flex-grow md:w-1/2 lg:pl-24 md:pl-16 flex flex-col md:items-start md:text-left items-center text-center">
+        
+        <br><br><br><br><br>
+        <p class="mb-8 leading-relaxed">Ingredients:</p>
+  
+        <div class="lg:w-3/3 w-full mx-auto overflow-auto">
+          <table class="table-auto w-full text-left whitespace-no-wrap">
+              <hr>
+            <tbody>
+        {% for ingredient in data.ingredients %}
+              <tr>
+                <td class="px-4 py-3"><img class="object-cover object-center rounded" style='height:30px;' alt="hero" src="https://spoonacular.com/cdn/ingredients_100x100/{{ingredient.image}}" /></td>
+                <td class="px-4 py-3">{{ingredient.name}}</td>
+            </tr>
+      {% endfor %}
+            </tbody>
+            <hr>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  
+{% endblock content %}
+
+
