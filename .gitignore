@@ -137,10 +137,5 @@ dmypy.json
 # Cython debug symbols
 cython_debug/
 
-static/
-images/
-README.me
-README.md
-website_preview.png
 
 

@@ -16,13 +16,13 @@ if READ_DOT_ENV_FILE:
 
 DEBUG = env('DEBUG')
 SECRET_KEY = env('SECRET_KEY')
-API_KEY = env('API_KEY')
+API_KEY = [''] # Your api must be in a list
 
 # False if not in os.environ
 
 
 
-ALLOWED_HOSTS = ['127.0.0.1','localhost','ramy-tedbira.herokuapp.com']
+ALLOWED_HOSTS = ['127.0.0.1','localhost']
 
 
 # Application definition
