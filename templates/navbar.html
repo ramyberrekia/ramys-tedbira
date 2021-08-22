@@ -8,23 +8,26 @@
     </a>
 
     <nav class="md:mr-auto md:ml-4 md:py-1 md:pl-4 md:border-l md:border-gray-400	flex flex-wrap items-center text-base justify-center">
-      <a href='{% url "recipes:search_by_ingredients"%}' class="mr-5 hover:text-gray-900">Search by Ingrediants</a>
+      <a href='{% url "recipes:search_by_ingredients"%}' class="mr-5 hover:text-gray-900">Search by Ingredients</a>
     </nav>
 <br>
-    <form action="" method="post" >
-      {% csrf_token %}
-      <div class="input-group">
-        <input type="text" class=" bg-white rounded border border-radius-100 border-gray-300 focus:border-red-500 focus:ring-2 focus:ring-red-200 text-base outline-none text-gray-700 py-1 px-3 leading-17 transition-colors duration-200" name="recipe" placeholder="{%if ingredient_search%}Type your ingredients{%else%}Search for recipes..{%endif%}">
-          <button class="btn btn-default" type="submit">
 
-      <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-1" viewBox="0 0 24 24">
-        <path d="M5 12h14M12 5l7 7-7 7"></path>
-      </svg>
-    </button>
-        </div>
+{% if 500 %}
+<form action="" method="post">
+  {%csrf_token%}
+    <div class="input-group">
+      <input type="text" class=" bg-white rounded border border-radius-100 border-gray-300 focus:border-red-500 focus:ring-2 focus:ring-red-200 text-base outline-none text-gray-700 py-1 px-3 leading-17 transition-colors duration-200" name="{%if ingredient_search%}ingredients{%else%}recipe{%endif%}" placeholder="{%if ingredient_search%}Type your ingredients{%else%}Search for recipes..{%endif%}">
+        <button class="btn btn-default" type="submit">
+
+    <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-1" viewBox="0 0 24 24">
+      <path d="M5 12h14M12 5l7 7-7 7"></path>
+    </svg>
+  </button>
       </div>
-      </form>
+
+    </form>
+{% endif %}
+  
+  
   </div>
 </header>
-
-     
