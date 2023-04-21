@@ -8,7 +8,7 @@ A website (aka: webapp) to get food recipes by recipes names &amp; ingredients t
 ![](website_preview.png)
 
 
-[Rami Berrekia](https://github.com/ramiberrekia) – [mcpedz62@gmail.com](mailto:mcpedz62@gmail.com)
+[Rami Berrekia](https://github.com/ramyberrekia) – [ramiberrekia1@gmail.com](mailto:ramiberrekia1@gmail.com)
 
 
 
